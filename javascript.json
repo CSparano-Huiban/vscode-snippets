@@ -1,0 +1,102 @@
+{
+	//https://code.visualstudio.com/docs/editor/userdefinedsnippets
+	//https://snippet-generator.app/
+	"class component": {
+		"prefix": "cc",
+		"body": [
+			"import React, { Component } from 'react';",
+			"import PropTypes from 'prop-types';",
+			"import classNames from 'classnames';",
+			"",
+			"import './${TM_FILENAME_BASE/(.)/${1:/downcase}/}.scss';",
+			"",
+			"const propTypes = {};",
+			"",
+			"const defaultProps = {};",
+			"",
+			"class $TM_FILENAME_BASE extends Component {",
+			"  constructor(props) {",
+			"    super(props);",
+			"",
+			"    this.state = {};",
+			"  }",
+			"",
+			"  render() {",
+			"    return (",
+			"      <div />",
+			"    );",
+			"  }",
+			"}",
+			"",
+			"$TM_FILENAME_BASE.propTypes = propTypes;",
+			"$TM_FILENAME_BASE.defaultProps = defaultProps;",
+			"",
+			"export default $TM_FILENAME_BASE;"
+		],
+		"description": "ClassComponent"
+	},
+	"functionComponent": {
+		"prefix": "ff",
+		"body": [
+			"import React from 'react';",
+			"import PropTypes from 'prop-types';",
+			"import classNames from 'classnames';",
+			"",
+			"import './${TM_FILENAME_BASE/(.)/${1:/downcase}/}.scss';",
+			"",
+			"const propTypes = {};",
+			"",
+			"const defaultProps = {};",
+			"",
+			"const $TM_FILENAME_BASE = (props) => {",
+			"  return (",
+			"    <div />",
+			"  );",
+			"};",
+			"",
+			"$TM_FILENAME_BASE.propTypes = propTypes;",
+			"$TM_FILENAME_BASE.defaultProps = defaultProps;",
+			"",
+			"export default $TM_FILENAME_BASE;"
+		],
+		"description": "functionComponent"
+	},
+	"default test describe": {
+		"prefix": "dtd",
+		"body": [
+			"describe('$TM_FILENAME_BASE', () => {",
+			"  xtest('Should correctly pass in Props', () => {",
+			"",
+			"  });",
+			"",
+			"  xtest('Should correctly use default props', () => {",
+			"",
+			"  });",
+			"});"
+		],
+		"description": "default test describe"
+	},
+	"test block": {
+		"prefix": "tb",
+		"body": [
+			"xtest('Should ${1:testDescription}', () => {",
+			"",
+			"});"
+		],
+		"description": "test block"
+	},
+	"bind this": {
+		"prefix": "bb",
+		"body": [
+			"this.$CLIPBOARD = this.$CLIPBOARD.bind(this);"
+		],
+		"description": "bind this"
+	},
+	"console.log the current clipboard": {
+		"prefix": "pr",
+		"body": [
+			"console.log('$CLIPBOARD: ', $CLIPBOARD);"
+		],
+		"description": "console.log the current clipboard"
+	}
+}
