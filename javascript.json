@@ -1,6 +1,4 @@
 {
-	//https://code.visualstudio.com/docs/editor/userdefinedsnippets
-	//https://snippet-generator.app/
 	"class component": {
 		"prefix": "cc",
 		"body": [
